@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Multi-fonction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#calculator">Calculatrice</a></li>
+                <li><a href="#todo">To-Do List</a></li>
+                <li><a href="#quotes">Générateur de Citations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Bienvenue dans l'application multi-fonction</h1>
+            <p>Sélectionnez une fonctionnalité dans le menu ci-dessus.</p>
+        </section>
+        <section id="calculator">
+            <h2>Calculatrice</h2>
+            <div class="calculator">
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                    <button onclick="appendNumber('1')">1</button>
+                    <button onclick="appendNumber('2')">2</button>
+                    <button onclick="appendNumber('3')">3</button>
+                    <button onclick="performOperation('+')">+</button>
+                    <button onclick="appendNumber('4')">4</button>
+                    <button onclick="appendNumber('5')">5</button>
+                    <button onclick="appendNumber('6')">6</button>
+                    <button onclick="performOperation('-')">-</button>
+                    <button onclick="appendNumber('7')">7</button>
+                    <button onclick="appendNumber('8')">8</button>
+                    <button onclick="appendNumber('9')">9</button>
+                    <button onclick="performOperation('*')">*</button>
+                    <button onclick="appendNumber('0')">0</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="performOperation('/')">/</button>
+                </div>
+            </div>
+        </section>
+        <section id="todo">
+            <h2>To-Do List</h2>
+            <div class="todo-list">
+                <input type="text" id="new-task" placeholder="Nouvelle tâche">
+                <button onclick="addTask()">Ajouter</button>
+                <ul id="tasks"></ul>
+            </div>            
+        </section>
+        <section id="quotes">
+            <h2>Générateur de Citations</h2>
+            <div class="quote-generator">
+                <p id="quote-display">Cliquez sur le bouton pour une nouvelle citation</p>
+                <button onclick="generateQuote()">Nouvelle Citation</button>
+                <button onclick="copyQuote()">Copier la Citation</button>
+            </div>            
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
